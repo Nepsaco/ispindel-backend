@@ -1,10 +1,25 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 9000
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const ispindel = require('./routes/ispindel')
+
+
+app.use(cors())
+
+app.use(ispindel)
+
+
+
+
+
+
+
+
+
+
+const port = process.env.PORT || 9000
 
 app.listen(port, () => {
     console.log(`listening on port: ${port}`)
 })
-
-app.use(ispindel)
