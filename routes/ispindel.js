@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 router.post('/ispindel', (request, response) => {
-    console.log(response.body)
+    console.log(request.body)
     response.json({ message: 'hi' })
 })
 
