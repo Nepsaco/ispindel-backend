@@ -3,7 +3,10 @@ const database = require('./database')
 module.exports = {
     ispindel: {
         getAll: () => {
-            return knex('ispindel')
+            return database('ispindel')
+        }, 
+        create: (dataPoint) => {
+            return database('ispindel').insert(dataPoint).returning('*')
         }
     }
 }
