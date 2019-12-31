@@ -6,6 +6,8 @@ const ispindel = require('./routes/ispindel')
 
 
 app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.use(ispindel)
 
