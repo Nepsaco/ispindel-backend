@@ -1,5 +1,5 @@
 const knex = require('knex')
-const connection = require('../knexfile')[process.env.NODE_ENV || 'development']
-const database = knex(connection)
+const config = require('../knexfile')[process.env.NODE_ENV || 'development']
+const database = knex(config)
 
 module.exports = database
