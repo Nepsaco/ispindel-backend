@@ -55,7 +55,7 @@ router.post('/login', (request, response) => {
 })
 
 router.get('/authorize', (request, response, next) => {
-    if(request.headers.authorization){
+    if(!request.headers.authorization){
         return response.status(401).json({error: 'Git Init'})
     }
     const token = request.headers.authorization.split(' ')[1]
