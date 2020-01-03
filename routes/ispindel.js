@@ -20,6 +20,4 @@ router.post('/ispindel', (request, response) => {
         }).then(response.status(201))
 })
 
-
-
 module.exports = router
